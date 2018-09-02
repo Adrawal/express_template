@@ -1,0 +1,44 @@
+<!DOCTYPE>
+<html>
+
+<head>
+    <title>user Subscription Report</title>
+</head>
+
+<body>
+
+        <h2> Customer subscription Details:</h2>
+
+        <table style="width:30%">
+                <label >customer Subscription ID:</label>
+                <%= sdc.subscriber_id %><br>
+
+                <label >customer Name:</label>
+                <%= sdc.customer_name %><br>
+
+                <label >total subscription cost</label>
+                <%= count %><br>
+                <p>channel subscribed for:</p>
+          <tr>
+            <td>channel name</td>
+            <td>cost per month</td> 
+          </tr>
+          <% for(var i=0;i<dsc.length;i++){ %>
+                <tr>
+                        <td><%=  dsc[i].channel_name %></td>
+                        <td><%= dsc[i].total_cost %></td>
+                        
+                      </tr>
+
+            <%} %>
+        
+          
+        </table>
+        
+        <br>
+        <a href="/home">Go Back</a>
+
+
+</body>
+
+</html>
